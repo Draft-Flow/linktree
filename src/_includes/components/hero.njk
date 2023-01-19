@@ -1,8 +1,9 @@
 <!-- Hero Image -->
 {% if settings.heroImage %}
-  <img class="object-cover h-32 w-full sm:h-48 sm:rounded-full" src="{{ settings.heroImage }}" alt="{{ settings.logoTitle }}"/>
+  <div class="flex justify-center">
+    <img class="object-cover h-32 w-auto sm:h-48 rounded-full" src="{{ settings.heroImage }}" alt="{{ settings.logoTitle }}"/>
+  </div>
 {% endif %}
-
 <!-- Hero Caption -->
 {% if settings.heroCaption %}
   <header class="pt-4 {{ settings.colors.heroCaption | default('text-gray-400',true) }} mx-auto w-full text-center">

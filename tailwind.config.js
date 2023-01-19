@@ -3,10 +3,15 @@ module.exports = {
     './src/**/*.html',
     './src/**/*.njk',
     './src/**/*.md',
+    './src/_data/settings.json',
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: {
+        'df-blue': '#121E44',
+      },
+    },
   },
   variants: {
     extend: {},

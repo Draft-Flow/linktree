@@ -4,6 +4,7 @@
   "description": "Simple, highly configurable alternative to Linktr.ee and LinkIn.bio 11ty and TailwindCSS",
   "main": "src/index.html",
   "scripts": {
+    "start": "npm run dev",
     "clean": "rimraf dist",
     "dev:eleventy": "eleventy --serve",
     "dev:tail": "postcss src/assets/css/tailwind.css -o dist/assets/css/tailwind.css --watch",
@@ -43,7 +44,7 @@
     "postcss": "^8.2.13",
     "postcss-cli": "^8.3.1",
     "rimraf": "^3.0.2",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^3.2.4"
   },
   "devDependencies": {
     "@11ty/eleventy-navigation": "^0.1.6"

@@ -8,7 +8,8 @@ layout: base
     {{ title }}
   </div>
 </header>
-
-<div class="mt-4 font-light {{ overrides.textColor | default(settings.colors.bodyText, true) }} {{ overrides.padding | default('px-4', true) }} {{ overrides.bgColor | default(settings.colors.background, true) }} {{ overrides.textSize | default('text-lg', true) }}">
+<div class="mt-4 font-light {{ overrides.textColor | default(settings.colors.bodyText, true) }} {{ overrides.padding |
+    default('px-4', true) }} {{ overrides.bgColor | default(settings.colors.background, true) }} {{ overrides.textSize |
+    default('text-lg', true) }}">
   {{ content | safe }}
 </div>
