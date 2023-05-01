@@ -1,6 +1,8 @@
 [
   {
+    "id": "website",
+    "icon": "/assets/images/icon-website.json",
     "url": "https://draftandflow.com",
-    "text": "Visit our website - DraftAndFlow.com"
+    "text": "Everything Else - DraftAndFlow.com"
   }
 ]

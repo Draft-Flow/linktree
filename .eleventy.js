@@ -1,4 +1,5 @@
 const htmlmin = require("html-minifier");
+const Image = require("@11ty/eleventy-img");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function (eleventyConfig) {
@@ -36,6 +37,24 @@ module.exports = function (eleventyConfig) {
 
   // Shortcodes
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  eleventyConfig.addAsyncShortcode("image", async function(src, alt, sizes) {
+		let metadata = await Image(src, {
+			widths: [500, 1000],
+			formats: ["avif", "jpeg"],
+      outputDir: 'dist/img/'
+		});
+
+		let imageAttributes = {
+			alt,
+			sizes,
+			loading: "lazy",
+			decoding: "async",
+		};
+
+		// You bet we throw an error on a missing alt (alt="" works okay)
+		return Image.generateHTML(metadata, imageAttributes);
+	});
 
   return {
     dir: {

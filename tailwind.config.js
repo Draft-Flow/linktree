@@ -17,6 +17,7 @@ module.exports = {
         }
       },
       fontFamily: {
+        base: ['Arial', 'sans-serif'],
         df: ['Norwester', 'Arial', 'sans-serif'],
       }
     },

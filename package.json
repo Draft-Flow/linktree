@@ -36,8 +36,12 @@
   "homepage": "https://github.com/shanerobinson/linkist#readme",
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-img": "^3.1.0",
     "autoprefixer": "^10.2.1",
     "cssnano": "^4.1.10",
+    "date-fns": "^2.30.0",
+    "dotenv": "^16.0.3",
+    "ebay-api": "^8.4.0",
     "html-minifier": "^4.0.0",
     "live-server": "^1.2.1",
     "npm-run-all": "^4.1.5",

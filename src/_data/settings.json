@@ -4,6 +4,7 @@
   "logoTitle": "Draft & Flow",
   "heroImage": "/assets/images/logo.png",
   "heroCaption": "Bike Servicing | Parts & Repairs | Custom Builds",
+  "heroHandle": "@DraftAndFlow",
   "social": {
     "facebook": "https://www.facebook.com/draftandflow",
     "instagram": "https://instagram.com/draftandflow",
@@ -27,9 +28,9 @@
     "navTextBackgroundHover": "",
     "heroCaption": "text-df-tan",
     "btnBackground": "",
-    "btnBorder": "",
+    "btnBorder": "border-df-tan",
     "btnHover": "",
-    "btnLink": "",
+    "btnLink": "text-df-tan",
     "svgColor": "",
     "svgHover": ""
   }
