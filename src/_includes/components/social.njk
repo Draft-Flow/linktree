@@ -5,7 +5,7 @@
   <!-- Dev.to -->
     {% if settings.social.dev %}
       <a aria-label="{{ settings.logoTitle }} on Dev.to" href="{{ settings.social.dev }}" class="focus:outline-none"> <svg
-        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block w-8 mx-2"
+        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block h-8 mx-2"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512">
@@ -27,7 +27,7 @@
   {% if settings.social.dribbble %}
     <a aria-label="{{ settings.logoTitle }} on Dribbble" href="{{ settings.social.dribbble }}" class="focus:outline-none">
       <svg
-        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block w-8 mx-2"
+        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block h-8 mx-2"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512">
@@ -52,16 +52,12 @@
   {% if settings.social.facebook %}
     <a aria-label="{{ settings.logoTitle }} on Facebook" href="{{ settings.social.facebook }}" class="focus:outline-none">
       <svg
-        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block w-8 mx-2"
-        role="img"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 512 512">
-        <title>Click to view {{ settings.logoTitle }} on Facebook</title>
-        <path
-          fill="currentColor"
-          d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48
-            93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31
-            482.38 504 379.78 504 256z"></path>
+        viewBox="0 0 50 50"
+        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block h-8 mx-2">
+        <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848
+        c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588
+        l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"/>
       </svg>
     </a>
   {% endif %}
@@ -70,7 +66,7 @@
   {% if settings.social.github %}
     <a aria-label="{{ settings.logoTitle }} on GitHub" href="{{ settings.social.github }}" class="focus:outline-none">
       <svg
-        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block w-8 mx-2"
+        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block h-8 mx-2"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 496 512">
@@ -97,22 +93,18 @@
   {% if settings.social.instagram %}
     <a aria-label="{{ settings.logoTitle }} on Instagram" href="{{ settings.social.instagram }}" class="focus:outline-none">
       <svg
-        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block w-8 mx-2"
-        role="img"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 448 512">
-        <title>Click to view {{ settings.logoTitle }} on Instagram</title>
+        viewBox="0 0 256 256"
+        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block h-8 mx-2">
         <path
-          fill="currentColor"
-          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0
-            189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12
-            26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1
-            27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4
-            58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7
-            67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5
-            11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6
-            22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7
-            102.7-9 132.1z"></path>
+          d="M75.9 3C35.705 3 3 35.725 3 75.93v104.16C3 220.29 35.725 253 75.93 253h104.16c40.2 0 72.91-32.725 72.91-72.93V75.9C253
+            35.705 220.275 3 180.07 3zM203 43c5.52 0 10 4.48 10 10s-4.48 10-10 10-10-4.48-10-10 4.48-10 10-10zm-75 20c35.85 0 65
+            29.15 65 65s-29.155 65-65 65c-35.85 0-65-29.155-65-65s29.15-65 65-65zm0 20c-24.855 0-45 20.145-45 45s20.145 45 45 45
+            45-20.145 45-45-20.145-45-45-45z"
+          font-family="none"
+          font-weight="none"
+          font-size="none"
+          text-anchor="none"/>
       </svg>
     </a>
   {% endif %}
@@ -121,7 +113,7 @@
   {% if settings.social.linkedin %}
     <a aria-label="{{ settings.logoTitle }} on LinkedIn!" href="{{ settings.social.linkedin }}" class="focus:outline-none">
       <svg
-        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block w-8 mx-2"
+        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block h-8 mx-2"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512">
@@ -140,7 +132,7 @@
   {% if settings.social.pinterest %}
     <a aria-label="{{ settings.logoTitle }} on Pinterest" href="{{ settings.social.pinterest }}" class="focus:outline-none">
       <svg
-        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block w-8 mx-2"
+        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block h-8 mx-2"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 496 512">
@@ -161,7 +153,7 @@
   {% if settings.social.twitter %}
     <a aria-label="{{ settings.logoTitle }} on Twitter" href="{{ settings.social.twitter }}" class="focus:outline-none">
       <svg
-        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block w-8 mx-2"
+        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block h-8 mx-2"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512">
@@ -184,7 +176,7 @@
   {% if settings.social.youtube %}
     <a aria-label="{{ settings.logoTitle }} on YouTube" href="{{ settings.social.youtube }}" class="focus:outline-none">
       <svg
-        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block w-8 mx-2"
+        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block h-8 mx-2"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 576 512">
@@ -207,26 +199,71 @@
       href="mailto:{{ settings.social.email }}"
       class="focus:outline-none">
       <svg
-        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block w-8 mx-2"
-        role="img"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 512 512">
-        <title>Click to send {{ settings.logoTitle }} an email</title>
-        <path
-          fill="currentColor"
-          d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815
-            14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256
-            440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17
-            83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518
-            0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303
-            36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504
-            307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729
-            58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z"></path>
+        viewBox="2 2 26 26"
+        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block h-8 mx-2">
+        <path d="M 2.5371094 6 L 13.810547 16.521484 C 14.477547 17.145484 15.523453 17.145484 16.189453 16.521484 L 27.462891 6 L
+        2.5371094 6 z M 1 7.3007812 L 1 22.585938 L 8.90625 14.679688 L 1 7.3007812 z M 29 7.3007812 L 21.09375 14.679688 L 29
+        22.585938 L 29 7.3007812 z M 10.367188 16.044922 L 2.4140625 24 L 27.585938 24 L 19.630859 16.044922 L 17.554688
+        17.982422 C 16.837688 18.651422 15.917047 18.986328 14.998047 18.986328 C 14.079047 18.986328 13.160359 18.651422
+        12.443359 17.982422 L 10.367188 16.044922 z"/>
+      </svg>
+    </a>
+  {% endif %}
+  <!-- Komoot -->
+  {% if settings.social.komoot %}
+    <a aria-label="Call {{ settings.logoTitle }}" href="tel:{{ settings.social.phone }}" class="focus:outline-none">
+      <svg
+        stroke="currentColor"
+        class="fill-current {{ svgColor }} hover:{{ svgHover }} inline-block h-8 mx-2"
+        stroke-width="0"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.8 14.829l2.2-3.43 2.2 3.43 5.962 5.962A11.946 11.946 0 0 1 12 24c-3.043 0-5.935-1.14-8.162-3.209zM0 12C0 5.385
+          5.385 0 12 0c6.62 0 12 5.385 12 12 0 2.663-.855 5.175-2.469 7.284l-6.018-6.018c.15-.412.226-.839.226-1.27A3.743 3.743 0 0
+          0 12 8.257a3.743 3.743 0 0 0-3.739 3.739c0 .431.075.858.226 1.27l-6.018 6.018A11.865 11.865 0 0 1 0 12Z"></path>
+      </svg>
+    </a>
+  {% endif %}
+  <!-- Phone -->
+  {% if settings.social.phone %}
+    <a aria-label="Call {{ settings.logoTitle }}" href="tel:{{ settings.social.phone }}" class="focus:outline-none">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 50 50"
+        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block h-8 mx-2">
+        <path d="M 39.03125 47 C 39.015625 47 39 47 38.984375 47 C 31.46875 46.753906 22.664063 39.46875 16.597656 33.398438 C
+        10.523438 27.328125 3.238281 18.519531 3.003906 11.039063 C 2.917969 8.414063 9.359375 3.746094 9.425781 3.699219 C
+        11.097656 2.535156 12.953125 2.949219 13.714844 4.003906 C 14.230469 4.71875 19.113281 12.117188 19.644531 12.957031 C
+        20.195313 13.828125 20.113281 15.125 19.425781 16.425781 C 19.046875 17.148438 17.789063 19.359375 17.199219 20.390625 C
+        17.835938 21.296875 19.519531 23.519531 22.996094 26.996094 C 26.476563 30.472656 28.695313 32.160156 29.605469 32.796875
+        C 30.636719 32.207031 32.847656 30.949219 33.570313 30.570313 C 34.851563 29.890625 36.140625 29.804688 37.019531
+        30.34375 C 37.917969 30.894531 45.296875 35.800781 45.976563 36.273438 C 46.546875 36.675781 46.914063 37.363281
+        46.988281 38.164063 C 47.058594 38.972656 46.808594 39.828125 46.289063 40.574219 C 46.246094 40.636719 41.632813 47
+        39.03125 47 Z"/>
+      </svg>
+    </a>
+  {% endif %}
+  <!-- WhatsApp -->
+  {% if settings.social.whatsapp %}
+    <a aria-label="Call {{ settings.logoTitle }}" href="tel:{{ settings.social.whatsapp }}" class="focus:outline-none">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 50 50"
+        class="fill-current {{ svgColor }} hover:{{ svgHover }}  inline-block h-8 mx-2"><path d="M25 2C12.318 2 2 12.318 2 25c0 3.96 1.023 7.854 2.963 11.29L2.037 46.73a.999.999 0 0 0 1.203 1.241l10.896-2.699A23.014
+        23.014 0 0 0 25 48c12.682 0 23-10.318 23-23S37.682 2 25 2zm11.57 31.116c-.492 1.362-2.852 2.605-3.986
+        2.772-1.018.149-2.306.213-3.72-.231a34.606 34.606 0 0
+        1-3.366-1.229c-5.923-2.526-9.791-8.415-10.087-8.804-.295-.389-2.411-3.161-2.411-6.03s1.525-4.28 2.067-4.864c.542-.584
+        1.181-.73 1.575-.73s.787.005 1.132.021c.363.018.85-.137 1.329 1.001.492 1.168 1.673 4.037 1.819 4.33.148.292.246.633.05
+        1.022s-.294.632-.59.973-.62.76-.886 1.022c-.296.291-.603.606-.259 1.19s1.529 2.493 3.285 4.039c2.255 1.986 4.158 2.602
+        4.748 2.894.59.292.935.243 1.279-.146.344-.39 1.476-1.703 1.869-2.286s.787-.487 1.329-.292c.542.194 3.445 1.604 4.035
+        1.896.59.292.984.438 1.132.681.148.242.148 1.41-.344 2.771z"/>
       </svg>
     </a>
   {% endif %}
 </div>
-<div class=" text-sm text-right mb-8 mr-4 italic {{ settings.colors.bodyText | default('text-gray-400',true) }}">
+<div class=" text-sm text-right mb-8 mr-4 italic opacity-60 {{ settings.colors.bodyText | default('text-gray-700',true) }}">
   &copy;
-  {% year %} by Draft & Flow LTD
+  {% year %} by Draft & Flow
 </div>

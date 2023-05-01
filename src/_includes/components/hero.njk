@@ -1,13 +1,13 @@
 <!-- Hero Image -->
 {% if settings.heroImage %}
   <div class="flex justify-center">
-    <img class="object-cover h-32 w-auto sm:h-48 rounded-full" src="{{ settings.heroImage }}" alt="{{ settings.logoTitle }}"/>
+    <img class="object-cover h-32 w-auto sm:h-48" src="{{ settings.heroImage }}" alt="{{ settings.logoTitle }}"/>
   </div>
 {% endif %}
 <!-- Hero Caption -->
 {% if settings.heroCaption %}
-  <header class="pt-4 {{ settings.colors.heroCaption | default('text-gray-400',true) }} mx-auto w-full text-center">
-    <div class="text-lg font-light">
+  <header class="font-df pt-4 {{ settings.colors.heroCaption | default('text-gray-400',true) }} mx-auto w-full text-center">
+    <div class="text-lg lg:text-2xl">
       {{ settings.heroCaption }}
     </div>
   </header>

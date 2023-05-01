@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
 
   // Passthrough all images
   eleventyConfig.addPassthroughCopy("./src/assets/images/");
+  eleventyConfig.addPassthroughCopy("./src/assets/fonts");
   eleventyConfig.addPassthroughCopy("./src/sw.js");
   eleventyConfig.addPassthroughCopy("./src/*.png");
   eleventyConfig.addPassthroughCopy("./src/*.svg");
