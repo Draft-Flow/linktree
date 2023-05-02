@@ -16,15 +16,59 @@ layout: base
               renderer: 'svg',
               loop: true,
               autoplay: true,
-              name: "Demo Animation"
+              name: "{{ link.id }}"
             });
           </script>
         </div>
       {% endif %}
-      <div class="basis-[min-content] md:basis-auto">{{ link.text | safe }}</div>
+      <div class="basis-[min-content] sm:basis-auto">{{ link.text | safe }}</div>
     </a>
   {% endfor %}
-</div>
+
+  <!-- Email Signup -->
+  <form action="https://draftandflow.us11.list-manage.com/subscribe/post?u=253d11f969cf4a0ac266ad0b1&amp;id=9c5aaeb56f&amp;f_id=00a5a6e0f0" method="post" target="_self">
+    <div class="sm:flex justify-center {{ settings.colors.btnBorder | default('border-gray-300',true) }} border-2 mb-4 py-4 px-4 {{ settings.colors.btnLink | default('text-gray-300',true) }} {{ settings.colors.btnBackground | default('bg-gray-700',true) }} rounded-lg focus:outline-none sm:hover:{{ settings.colors.btnHover | default('bg-gray-600',true) }}">
+      <div class="block flex justify-center items-center font-medium">
+        <div class="icon">
+          <div id="icon-subscribe"></div>
+          <script>
+            var animation = bodymovin.loadAnimation({
+              container: document.getElementById('icon-subscribe'),
+              path: '/assets/images/icon-subscribe.json',
+              renderer: 'svg',
+              loop: true,
+              autoplay: true,
+              name: "Subscribe"
+            });
+          </script>
+        </div>
+        <div class="flex flex-col sm:block">
+          <input
+            id="subscribe-input"
+            type="email"
+            required
+            name="EMAIL"
+            placeholder="Subscribe for deals, news & more…"
+            class="px-1 py-2 w-60 text-ellipsis overflow-hidden sm:w-72 border border-df-tan/60 rounded {{ settings.colors.btnBackground | default('bg-gray-700',true) }}"
+          />
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_253d11f969cf4a0ac266ad0b1_9c5aaeb56f" tabindex="-1" value="">
+          </div>
+        </div>
+      </div>
+    <input id="subscribe-submit" class="btn-submit" type="submit" value="Submit" disabled />
+  </div>
+</form>
+<script>
+  const subscribeEmail = document.querySelector('#subscribe-input')
+  const subscribeSubmit = document.querySelector('#subscribe-submit')
+
+  subscribeEmail.addEventListener('input', (e) => {
+      if (e.target.validity.valid) {
+          subscribeSubmit.disabled = false
+      }
+  })
+</script>
 
 <!-- Shop -->
 {% if shop.length > 0 %}

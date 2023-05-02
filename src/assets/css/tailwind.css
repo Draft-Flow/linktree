@@ -24,6 +24,18 @@ td {
   @apply w-8 shrink-0 mr-2 fill-df-tan;
 }
 
+.btn-submit {
+  @apply mt-2 sm:mt-0 ml-2 px-2 font-medium rounded border border-df-tan bg-gray-700 text-df-tan;
+}
+
+.btn-submit:hover:not(:disabled) {
+  @apply bg-df-tan border-gray-700 text-gray-700 cursor-pointer;
+}
+
+.btn-submit:disabled {
+  @apply opacity-50;
+}
+
 @tailwind components;
 
 @tailwind utilities;

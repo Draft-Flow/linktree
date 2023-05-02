@@ -31,7 +31,7 @@
     "btnBorder": "border-df-tan",
     "btnHover": "",
     "btnLink": "text-df-tan",
-    "svgColor": "",
-    "svgHover": ""
+    "svgColor": "fill-df-tan/60",
+    "svgHover": "fill-df-tan"
   }
 }
