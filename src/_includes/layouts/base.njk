@@ -23,19 +23,9 @@
     {% endif -%}
     <!-- end Fathom stats -->
     <!-- ======================= -->
-    <!-- Google stats -->
-      {% if settings.stats.google -%}
-      <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id={{ settings.stats.google }}"> </script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', '{{ settings.stats.google }}');
-      </script>
-    {% endif -%}
-    <!-- end Google stats -->
+    <!-- Plausible stats -->
+      <script defer data-domain="links.draftandflow.com" src="https://plausible.io/js/script.js"></script>
+    <!-- end Plausible stats -->
     <style>
       @font-face {
         font-family: 'Norwester';
