@@ -16,6 +16,10 @@ td {
   @apply px-8 py-1;
 }
 
+.logo {
+  @apply px-8 mb-4 w-full max-w-sm;
+}
+
 .icon {
   @apply w-8 mr-2 fill-df-tan;
 }
