@@ -3,6 +3,6 @@
     "id": "website",
     "icon": "/assets/images/icon-website.json",
     "url": "https://draftandflow.com",
-    "text": "World Wide Web HQ - DraftAndFlow.com"
+    "text": "<span class=\"whitespace-nowrap\">World Wide Web HQ -</span> DraftAndFlow.com"
   }
 ]

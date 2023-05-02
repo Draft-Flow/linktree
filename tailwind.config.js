@@ -4,6 +4,7 @@ module.exports = {
     './src/**/*.njk',
     './src/**/*.md',
     './src/_data/settings.json',
+    './src/_data/links.json',
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {

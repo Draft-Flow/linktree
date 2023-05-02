@@ -21,7 +21,7 @@ td {
 }
 
 .icon {
-  @apply w-8 mr-2 fill-df-tan;
+  @apply w-8 shrink-0 mr-2 fill-df-tan;
 }
 
 @tailwind components;
