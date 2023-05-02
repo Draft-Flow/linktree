@@ -25,7 +25,7 @@ td {
 }
 
 .btn-submit {
-  @apply mt-2 sm:mt-0 ml-2 px-2 font-medium rounded border border-df-tan bg-gray-700 text-df-tan;
+  @apply mt-2 sm:mt-0 ml-auto sm:ml-2 px-2 font-medium rounded border border-df-tan bg-gray-700 text-df-tan;
 }
 
 .btn-submit:hover:not(:disabled) {
