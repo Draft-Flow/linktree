@@ -22,7 +22,7 @@ const generateDoc = async (doc) => {
 }
 
 const getRefurbs = async () => {
-  const filter = groq`*[_type == "refurbBike"]`
+  const filter = groq`*[_type == "refurbBike"] && bike.available == true`
   const projection = groq`{
     "id": _id,
     "name": bike.name,
