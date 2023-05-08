@@ -78,13 +78,48 @@ layout: base
   {% for item in shop %}
     <li>
       <a class="font-base text-base text-df-tan" href="{{ item.url }}">
-        <div class="z-10 relative aspect-video mb-2 overflow-hidden">
+        <div class="z-10 relative aspect-[5/3] mb-2 overflow-hidden">
           {% image item.image, item.name, "(min-width: 30em) 50vw, 100vw" %}
           <div class="w-32 text-center pt-1 text-lg pb-10 absolute -right-12 -bottom-4 bg-black font-df -rotate-45">
             £{{ item.price }}
           </div>
         </div>
         <div class="relative z-20">{{ item.name }}</div>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+
+<!-- Refurbs -->
+{% if refurbs.length > 0 %}
+<h2 class="mt-8 font-df text-2xl lg:text-4xl text-center text-df-tan">Refurbs</h2>
+<div class="leading-4 text-df-tan"><small>We refurb old bikes and put them back into use. Get in touch if interested in getting a refurb, or donating a bike</small></div>
+<div class="mt-4 w-full px-4 mx-auto text-center">
+  <ul class="grid md:grid-cols-2 gap-8">
+  {% for refurb in refurbs %}
+    <li>
+      <a class="font-base text-base text-df-tan" href="https://draftandflow.com/bikes/refurbs/{{ refurb.slug }}">
+        <div class="z-10 relative aspect-[4/3] mb-2 overflow-hidden">
+          <div class="w-full">
+            {% image refurb.images[0].url, refurb.name, "(min-width: 30em) 100vw" %}
+          </div>
+          <div class="w-32 text-center pt-1 text-lg pb-10 absolute -right-12 -bottom-4 bg-black font-df -rotate-45">
+            {% if refurb.price == 0 %}
+              FREE
+            {% else %}
+              £{{ refurb.price }} 
+            {% endif %}
+          </div>
+        </div>
+        <div class="relative z-20">
+          {% if refurb.altPrice %}
+            <small>or {{ refurb.altPrice }} </small><br>
+          {% endif %}
+          {{ refurb.name }}
+        </div>
       </a>
     </li>
   {% endfor %}
