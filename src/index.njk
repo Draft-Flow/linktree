@@ -5,7 +5,7 @@ layout: base
 <!-- LINKS -->
 <div class="mt-8 w-full px-4 mx-auto text-center">
   {% for link in links %}
-    <a href="{{ link.url }}" class="block w-full flex justify-center items-center font-medium {{ settings.colors.btnBorder | default('border-gray-300',true) }} border-2 mb-4 py-4 px-4 {{ settings.colors.btnLink | default('text-gray-300',true) }} {{ settings.colors.btnBackground | default('bg-gray-700',true) }} rounded-lg focus:outline-none sm:hover:{{ settings.colors.btnHover | default('bg-gray-600',true) }}">
+    <a href="{{ link.url }}" class="block w-full flex justify-center items-center font-medium mb-2 p2-4 px-2 text-df-tan">
       {% if link.icon %}
         <div class="icon">
           <div id="icon-{{ link.id }}"></div>
@@ -21,109 +21,108 @@ layout: base
           </script>
         </div>
       {% endif %}
-      <div class="basis-[min-content] sm:basis-auto">{{ link.text | safe }}</div>
+      <div class="text-left basis-[min-content] xs:basis-auto">{{ link.text | safe }}</div>
     </a>
   {% endfor %}
 
   <!-- Email Signup -->
-  <form action="https://draftandflow.us11.list-manage.com/subscribe/post?u=253d11f969cf4a0ac266ad0b1&amp;id=9c5aaeb56f&amp;f_id=00a5a6e0f0" method="post" target="_self">
-    <div class="w-full flex flex-col sm:flex-row sm:justify-center {{ settings.colors.btnBorder | default('border-gray-300',true) }} border-2 mb-4 py-4 px-4 {{ settings.colors.btnLink | default('text-gray-300',true) }} {{ settings.colors.btnBackground | default('bg-gray-700',true) }} rounded-lg focus:outline-none sm:hover:{{ settings.colors.btnHover | default('bg-gray-600',true) }}">
-      <div class="w-fuull block flex justify-center items-center font-medium">
-        <div class="icon">
-          <div id="icon-subscribe"></div>
-          <script>
-            var animation = bodymovin.loadAnimation({
-              container: document.getElementById('icon-subscribe'),
-              path: '/assets/images/icon-subscribe.json',
-              renderer: 'svg',
-              loop: true,
-              autoplay: true,
-              name: "Subscribe"
-            });
-          </script>
-        </div>
-        <div class="flex flex-1 flex-col sm:block">
-          <input
-            id="subscribe-input"
-            type="email"
-            required
-            name="EMAIL"
-            placeholder="Subscribe for deals, news & more…"
-            class="h-8 px-1 py-2 w-full text-ellipsis overflow-hidden sm:w-72 border border-df-tan/60 rounded {{ settings.colors.btnBackground | default('bg-gray-700',true) }}"
-          />
-          <div style="position: absolute; left: -5000px;" aria-hidden="true">
-            <input type="text" name="b_253d11f969cf4a0ac266ad0b1_9c5aaeb56f" tabindex="-1" value="">
-          </div>
-        </div>
+  <form action="https://draftandflow.us11.list-manage.com/subscribe/post?u=253d11f969cf4a0ac266ad0b1&amp;id=9c5aaeb56f&amp;f_id=00a5a6e0f0" method="post" target="_self" class="w-full flex xs:justify-center xs:items-center font-medium mb-4 py-4 px-2 text-df-tan">
+    <div class="icon">
+      <div id="icon-subscribe"></div>
+      <script>
+        var animation = bodymovin.loadAnimation({
+          container: document.getElementById('icon-subscribe'),
+          path: '/assets/images/icon-subscribe.json',
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
+          name: "Subscribe"
+        });
+      </script>
+    </div>
+    <div class="flex flex-1 xs:flex-none flex-col xs:flex-row">
+      <input
+        id="subscribe-input"
+        type="email"
+        required
+        name="EMAIL"
+        placeholder="Subscribe for deals, news & more…"
+        class="h-8 px-1 py-2 w-full text-ellipsis overflow-hidden xs:w-72 border border-df-tan/60 rounded {{ settings.colors.btnBackground | default('bg-gray-700',true) }}"
+      />
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_253d11f969cf4a0ac266ad0b1_9c5aaeb56f" tabindex="-1" value="">
       </div>
-    <input id="subscribe-submit" class="btn-submit" type="submit" value="Submit" disabled />
+      <input id="subscribe-submit" class="btn-submit" type="submit" value="Submit" disabled />
+    </div>
+  </form>
+
+  <script>
+    const subscribeEmail = document.querySelector('#subscribe-input')
+    const subscribeSubmit = document.querySelector('#subscribe-submit')
+
+    subscribeEmail.addEventListener('input', (e) => {
+        if (e.target.validity.valid) {
+            subscribeSubmit.disabled = false
+        }
+    })
+  </script>
+
+  <!-- Shop -->
+  {% if shop.length > 0 %}
+  <h2 class="mt-8 font-df text-2xl lg:text-4xl text-center text-df-tan">From the Shop</h2>
+  <div class="mt-4 w-full px-4 mx-auto text-center">
+    <ul class="grid md:grid-cols-2 gap-8">
+    {% for item in shop %}
+      <li>
+        <a class="font-base text-base text-df-tan" href="{{ item.url }}">
+          <div class="z-10 relative aspect-[5/3] mb-2 overflow-hidden">
+            {% image item.image, item.name, "(min-width: 30em) 50vw, 100vw" %}
+            <div class="w-32 text-center pt-1 text-lg pb-10 absolute -right-12 -bottom-4 bg-black font-df -rotate-45">
+              £{{ item.price }}
+            </div>
+          </div>
+          <div class="relative z-20">{{ item.name }}</div>
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
   </div>
-</form>
-<script>
-  const subscribeEmail = document.querySelector('#subscribe-input')
-  const subscribeSubmit = document.querySelector('#subscribe-submit')
+  {% endif %}
 
-  subscribeEmail.addEventListener('input', (e) => {
-      if (e.target.validity.valid) {
-          subscribeSubmit.disabled = false
-      }
-  })
-</script>
 
-<!-- Shop -->
-{% if shop.length > 0 %}
-<h2 class="mt-8 font-df text-2xl lg:text-4xl text-center text-df-tan">From the Shop</h2>
-<div class="mt-4 w-full px-4 mx-auto text-center">
-  <ul class="grid md:grid-cols-2 gap-8">
-  {% for item in shop %}
-    <li>
-      <a class="font-base text-base text-df-tan" href="{{ item.url }}">
-        <div class="z-10 relative aspect-[5/3] mb-2 overflow-hidden">
-          {% image item.image, item.name, "(min-width: 30em) 50vw, 100vw" %}
-          <div class="w-32 text-center pt-1 text-lg pb-10 absolute -right-12 -bottom-4 bg-black font-df -rotate-45">
-            £{{ item.price }}
+  <!-- Refurbs -->
+  {% if refurbs.length > 0 %}
+  <h2 class="mt-8 font-df text-2xl lg:text-4xl text-center text-df-tan">Refurbs</h2>
+  <div class="leading-4 mx-auto text-df-tan max-w-prose"><small>We refurb donated bikes and put them back into use. Get in touch if interested in getting a refurb, or donating a bike</small></div>
+  <div class="mt-4 w-full px-4 mx-auto text-center">
+    <ul class="grid md:grid-cols-2 gap-8">
+    {% for refurb in refurbs %}
+      <li>
+        <a class="font-base text-base text-df-tan" href="https://draftandflow.com/bikes/refurbs/{{ refurb.slug }}">
+          <div class="z-10 relative aspect-[4/3] mb-2 overflow-hidden">
+            <div class="w-full">
+              {% image refurb.images[0].url, refurb.name, "(min-width: 30em) 100vw" %}
+            </div>
+            <div class="w-32 text-center pt-1 text-lg pb-10 absolute -right-12 -bottom-4 bg-black font-df -rotate-45">
+              {% if refurb.price == 0 %}
+                FREE
+              {% else %}
+                £{{ refurb.price }} 
+              {% endif %}
+            </div>
           </div>
-        </div>
-        <div class="relative z-20">{{ item.name }}</div>
-      </a>
-    </li>
-  {% endfor %}
-  </ul>
-</div>
-{% endif %}
-
-
-<!-- Refurbs -->
-{% if refurbs.length > 0 %}
-<h2 class="mt-8 font-df text-2xl lg:text-4xl text-center text-df-tan">Refurbs</h2>
-<div class="leading-4 text-df-tan"><small>We refurb donated bikes and put them back into use. Get in touch if interested in getting a refurb, or donating a bike</small></div>
-<div class="mt-4 w-full px-4 mx-auto text-center">
-  <ul class="grid md:grid-cols-2 gap-8">
-  {% for refurb in refurbs %}
-    <li>
-      <a class="font-base text-base text-df-tan" href="https://draftandflow.com/bikes/refurbs/{{ refurb.slug }}">
-        <div class="z-10 relative aspect-[4/3] mb-2 overflow-hidden">
-          <div class="w-full">
-            {% image refurb.images[0].url, refurb.name, "(min-width: 30em) 100vw" %}
-          </div>
-          <div class="w-32 text-center pt-1 text-lg pb-10 absolute -right-12 -bottom-4 bg-black font-df -rotate-45">
-            {% if refurb.price == 0 %}
-              FREE
-            {% else %}
-              £{{ refurb.price }} 
+          <div class="relative z-20">
+            {% if refurb.altPrice %}
+              <small>or {{ refurb.altPrice }} </small><br>
             {% endif %}
+            {{ refurb.name }}
           </div>
-        </div>
-        <div class="relative z-20">
-          {% if refurb.altPrice %}
-            <small>or {{ refurb.altPrice }} </small><br>
-          {% endif %}
-          {{ refurb.name }}
-        </div>
-      </a>
-    </li>
-  {% endfor %}
-  </ul>
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
 </div>
-{% endif %}
 <!-- ==================================================== -->
