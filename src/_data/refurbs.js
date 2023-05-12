@@ -24,6 +24,7 @@ const generateDoc = async (doc) => {
 const getRefurbs = async () => {
   const filter = groq`*[_type == "refurbBike" && bike.available == true]`
   const projection = groq`{
+    _createdAt,
     "id": _id,
     "name": bike.name,
     "slug": bike.slug.current,
@@ -35,7 +36,7 @@ const getRefurbs = async () => {
     }
   }`
 
-  const order = ''
+  const order = '| order(_createdAt desc)'
   const query = [filter, projection, order].join(' ')
   const docs = await client.fetch(query).catch((err) => {
     // eslint-disable-next-line
