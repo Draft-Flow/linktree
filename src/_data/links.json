@@ -4,5 +4,11 @@
     "icon": "/assets/images/icon-website.json",
     "url": "https://draftandflow.com",
     "text": "<span class=\"whitespace-nowrap\">World Wide Web HQ -</span> DraftAndFlow.com"
+  },
+  {
+    "id": "komoot",
+    "icon": "/assets/images/icon-routes.json",
+    "url": "https://www.komoot.com/user/draftandflow",
+    "text": "Route Suggestions on Komoot"
   }
 ]
