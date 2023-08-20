@@ -9,6 +9,6 @@
     "id": "komoot",
     "icon": "/assets/images/icon-routes.json",
     "url": "https://www.komoot.com/user/draftandflow",
-    "text": "Route Suggestions on Komoot"
+    "text": "<span class=\"whitespace-nowrap\">Route Suggestions on</span> Komoot"
   }
 ]
