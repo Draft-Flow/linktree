@@ -14,6 +14,7 @@ const eBay = new eBayApi({
 });
 
 module.exports = async () => {
+  try {
   const items = await eBay.trading.GetSellerList({
     startTimeFrom: formatISO(sub(new Date(), { months: 3 })),
     startTimeTo: formatISO(endOfToday()),
@@ -27,6 +28,11 @@ module.exports = async () => {
 
   const { ItemArray: itemArray } = items
 
+  if (!itemArray.length) {
+    return null
+
+  }
+
   return itemArray.Item.map( (item) => {
     return {
       name: item.Title,
@@ -35,4 +41,8 @@ module.exports = async () => {
       image: item.PictureDetails.PictureURL[0],
     }
   })
+} catch (error) {
+  console.error(error)
+}
+
 }
