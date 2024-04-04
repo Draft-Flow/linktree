@@ -1,9 +1,9 @@
 [
   {
-    "id": "survey",
-    "icon": "/assets/images/icon-survey.json",
-    "url": "https://forms.gle/zRGD2BndMhmzjvrR7",
-    "text": "<span class=\"whitespace-nowrap\">Cycle Workshop Survey</span>"
+    "id": "news",
+    "icon": "/assets/images/icon-news.json",
+    "url": "https://draftandflow.com/news/",
+    "text": "<span class=\"whitespace-nowrap\">Latest News</span>"
   },
   {
     "id": "website",
